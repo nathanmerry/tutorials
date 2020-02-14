@@ -1,14 +1,14 @@
 @extends ('layout')
 
 
-
-
 @section('content')
+ <!-- Header -->
+
   <!-- Banner -->
   <section id="banner">
     <div class="inner">
       <header>
-        <h1>Welcome to Projection</h1>
+        <h1>This is the about page</h1>
       </header>
 
       <div class="flex ">
