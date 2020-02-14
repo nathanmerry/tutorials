@@ -2,8 +2,6 @@
 
 
 @section('content')
- <!-- Header -->
-
   <!-- Banner -->
   <section id="banner">
     <div class="inner">

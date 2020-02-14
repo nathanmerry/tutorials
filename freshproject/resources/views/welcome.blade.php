@@ -1,8 +1,5 @@
 @extends ('layout')
 
-
-
-
 @section('content')
   <!-- Banner -->
   <section id="banner">

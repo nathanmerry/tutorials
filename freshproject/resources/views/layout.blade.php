@@ -12,8 +12,8 @@
       <div class="inner">
         <a href="index.html" class="logo"><strong>Projection</strong> by TEMPLATED</a>
         <nav id="nav">
-          <a href="/">Home</a>
-          <a href="/about">Generic</a>
+          <a class="{{ Request::path() === '/' ? 'nav-active' : '' }}" href="/">Home</a>
+          <a class="{{ Request::path() === 'about' ? 'nav-active' : '' }}" href="/about">About</a>
         </nav>
         <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
       </div>
