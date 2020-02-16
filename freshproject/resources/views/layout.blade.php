@@ -4,7 +4,7 @@
 		<title>Projection by TEMPLATED</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="/css/app.css" />
 	</head>
 	<body>
@@ -15,6 +15,7 @@
         <nav id="nav">
           <a class="{{ Request::path() === '/' ? 'nav-active' : '' }}" href="/">Home</a>
           <a class="{{ Request::path() === 'about' ? 'nav-active' : '' }}" href="/about">About</a>
+          <a class="{{ Request::path() === 'articals' ? 'nav-active' : '' }}" href="/articals">Articals</a>
         </nav>
         <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
       </div>
