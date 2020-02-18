@@ -22,6 +22,13 @@ Route::get('/about', function () {
     ]);
 });
 
+
+Route::get('/articals', 'ArticalsController@index');
+Route::post('/articals', 'ArticalsController@store');
+Route::get('/articals/create', 'ArticalsController@create');
 Route::get('/articals/{artical}', 'ArticalsController@show');
+Route::get('/articals/{artical}/edit', 'ArticalsController@edit');
+Route::put('/articals/{artical}', 'ArticalsController@update');
+
 
 Route::get('/posts/{post}', 'PostsController@show');
