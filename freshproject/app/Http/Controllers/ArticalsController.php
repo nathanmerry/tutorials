@@ -44,14 +44,14 @@ class ArticalsController extends Controller
 
     public function update(Artical $artical)
     {
-        Artical::update($this->validateArtical());
+        $artical->update($this->validateArtical());
 
-        return redirect('/articals/' . $artical->id);
+        return redirect($artical->path());
     }
 
     public function destroy()
     {
-        //    Delete the recourse
+        //    Delete the recourses
     }
 
     protected function validateArtical()

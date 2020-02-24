@@ -9,7 +9,9 @@
       <div style="text-align: left">
         <header>
           <h3>
-            <a href="/articals/{{$artical->id}}">{{$artical->title}}</a>
+            <a href="{{ $artical->path() }}">
+              {{$artical->title}}
+            </a>
           </h3>
         </header>
         <p>{{$artical->excerpt}}</p>
