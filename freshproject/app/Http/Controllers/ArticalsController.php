@@ -31,18 +31,7 @@ class ArticalsController extends Controller
     public function store()
     {
         //    Persist the new resource
-
-        request()->validate([
-            'title' => 'required',
-            'excerpt' => 'required',
-            'body' => 'required'
-        ]);
-
-        $artical = new Artical();
-        $artical->title = request('title');
-        $artical->excerpt = request('excerpt');
-        $artical->body = request('body');
-        $artical->save();
+        Artical::create($this->validateArtical());
 
         return redirect('/articals');
     }
@@ -55,17 +44,22 @@ class ArticalsController extends Controller
 
     public function update(Artical $artical)
     {
-        //    Persist the edited recourse
-        $artical->title = request('title');
-        $artical->excerpt = request('excerpt');
-        $artical->body = request('body');
-        $artical->save();
-        return redirect('/articals/' . $artical->id);
+        Artical::update($this->validateArtical());
 
+        return redirect('/articals/' . $artical->id);
     }
 
     public function destroy()
     {
         //    Delete the recourse
+    }
+
+    protected function validateArtical()
+    {
+        return request()->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+        ]);
     }
 }
