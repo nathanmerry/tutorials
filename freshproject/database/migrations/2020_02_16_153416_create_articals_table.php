@@ -15,10 +15,16 @@ class CreateArticalsTable extends Migration
     {
         Schema::create('articals', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id');
             $table->string('title');
             $table->text('excerpt');
             $table->text('body');
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
         });
     }
 
